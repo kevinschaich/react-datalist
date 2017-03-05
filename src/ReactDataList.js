@@ -82,6 +82,10 @@ export default class ReactDataList extends React.Component {
                 break
             case 9:
                 // TAB
+                event.preventDefault();
+                if (typeof this.state.selected === 'number') { this.selectFilteredOption(this.state.selected) }
+                else { this.selectOption(event.target.value) }
+                break
             case 13:
                 // ENTER
                 if (typeof this.state.selected === 'number') { this.selectFilteredOption(this.state.selected) }
