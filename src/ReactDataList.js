@@ -80,6 +80,8 @@ export default class ReactDataList extends React.Component {
                 var newSelectedIndex = this.state.selected > 0 ? this.state.selected - 1 : 0
                 this.setState({selected : newSelectedIndex})
                 break
+            case 9:
+                // TAB
             case 13:
                 // ENTER
                 if (typeof this.state.selected === 'number') { this.selectFilteredOption(this.state.selected) }
